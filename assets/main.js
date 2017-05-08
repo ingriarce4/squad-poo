@@ -7,7 +7,7 @@ function squadMiembro(nombre, apellido, edad, hobbies){ //agre
   }
 
 function crearSquad(){
-  var miembros = [];
+  var integrantes = [];
 
   var berenice = new squadMiembro("Berenice ", "Ríos", 28, ["vegetariana", "meditar", "hacer panes"]);
   var macarena = new squadMiembro("Macarena ", "Baltra", 27, ["engrampar", "sonreir", "hacer ejercicios"]);
@@ -18,7 +18,20 @@ function crearSquad(){
   var susana = new squadMiembro("Susana ", "Arce", 28, ["Mandarme la lista", "Inventar mejores hobbies", "Comer"]);
   var alexa = new squadMiembro("Alexandra ", "Neira", 28, ["Ver series", "Ser dj Master", "explicar código"]);
 
-  miembros.forEach(function(el, i){   //imprimimos la lista en el html
+  miembros.push(berecine);
+  miembros.push(macarena);
+  miembros.push(ratita);
+  miembros.push(claudia);
+  miembros.push(Nicole);
+  miembros.push(Fram);
+  miembros.push(Susana);
+  miembros.push(Alexa);
+
+  integrantes.forEach(function(el, i){   //imprimimos la lista en el html
     var contenedor = document.getElementById('contenedor');
     var item = document.createElement('div');
-    item.id = 'm' + (i+1);  
+    item.id = 'm' + (i+1);
+
+    //contenedor 
+   var seccionPersonal = document.createElement('section');
+   seccionPersonal.setAttribute("class", "div-contenedor");
